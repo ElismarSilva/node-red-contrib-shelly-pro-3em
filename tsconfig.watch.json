@@ -1,7 +1,829 @@
-{
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "incremental": true,
-        "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+[
+    {
+        "id": "729942b3f3e15c98",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a3b1e5e93835db4d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b98e493e41183753",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "aaeee606f7f28d55",
+        "type": "tab",
+        "label": "Fluxo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "10c5feeab6d3159e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4a6e1b280788ca45",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a1675a04f832241c",
+        "type": "ui_tab",
+        "name": "Feed Pet",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bc1fb429d631b202",
+        "type": "ui_group",
+        "name": "Alimentação Manual",
+        "tab": "a1675a04f832241c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7b9941fb21ea9ea6",
+        "type": "ui_group",
+        "name": "Dados Recebidos",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95affd207d43f542",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "a1675a04f832241c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e78c53824d21c1be",
+        "type": "ui_group",
+        "name": "Umidade",
+        "tab": "a1675a04f832241c",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "59dfa90a7ff0d246",
+        "type": "ui_tab",
+        "name": "Reservatorio_Esp32",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6a166b3bdd6621c6",
+        "type": "ui_group",
+        "name": "Reservatório",
+        "tab": "59dfa90a7ff0d246",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "29fda99565b1da14",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "node_red_iot",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "ffc3aa6e8ff700e0",
+        "type": "gpsoo-configurator",
+        "name": "默认账号",
+        "phone": "broker.hivemq.com",
+        "password": "1883",
+        "platform": "gpsoo"
+    },
+    {
+        "id": "4c1037acf269adb8",
+        "type": "ui_group",
+        "name": "gps_esp32",
+        "tab": "acb5a6b26f7e188a",
+        "order": 5,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "acb5a6b26f7e188a",
+        "type": "ui_tab",
+        "name": "gps",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "97e3948106a47c90",
+        "type": "geofence-manager",
+        "name": "esp32_gps",
+        "geofences": {}
+    },
+    {
+        "id": "f373d04947060997",
+        "type": "ui_group",
+        "name": "Alimentação",
+        "tab": "a1675a04f832241c",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f3658d0981dbe56",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "9f523a2aa70e925e",
+        "type": "ui_spacer",
+        "z": "729942b3f3e15c98",
+        "name": "spacer",
+        "group": "bc1fb429d631b202",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "12b84c53d2456056",
+        "type": "ui_spacer",
+        "z": "729942b3f3e15c98",
+        "name": "spacer",
+        "group": "bc1fb429d631b202",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5ef1af9160430e7d",
+        "type": "ui_spacer",
+        "z": "729942b3f3e15c98",
+        "name": "spacer",
+        "group": "f373d04947060997",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "71ac48d39787b3c4",
+        "type": "mqtt in",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "topic": "btn_status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "aef6b377ca5762fc"
+            ]
+        ]
+    },
+    {
+        "id": "aef6b377ca5762fc",
+        "type": "debug",
+        "z": "729942b3f3e15c98",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9de7b21405431d2b",
+        "type": "mqtt in",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "topic": "BUTTON_ON",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "aef6b377ca5762fc",
+                "c31a1d6a06bbf996"
+            ]
+        ]
+    },
+    {
+        "id": "a3abacb334b1f754",
+        "type": "mqtt out",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "topic": "BUTTON_ON",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10c5feeab6d3159e",
+        "x": 620,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a4cc320a9df5534c",
+        "type": "ui_button",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "group": "bc1fb429d631b202",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Alimentar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "Green",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "a3abacb334b1f754",
+                "c31a1d6a06bbf996"
+            ]
+        ]
+    },
+    {
+        "id": "60a8aa5a53d23de2",
+        "type": "mqtt in",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "topic": "horasProxima",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "aef6b377ca5762fc"
+            ]
+        ]
+    },
+    {
+        "id": "c31a1d6a06bbf996",
+        "type": "ui_chart",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "group": "bc1fb429d631b202",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico de Alimentação Manual",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d94e533c7a88fbf4",
+        "type": "ui_chart",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "group": "f373d04947060997",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "label": "Últmas Alimentações ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1",
+        "ymax": "2",
+        "removeOlder": "7",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9f418725f610911",
+        "type": "mqtt in",
+        "z": "729942b3f3e15c98",
+        "name": "",
+        "topic": "horasUltima",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "aef6b377ca5762fc",
+                "d94e533c7a88fbf4"
+            ]
+        ]
+    },
+    {
+        "id": "6dd09dd63fd5ac04",
+        "type": "mqtt in",
+        "z": "a3b1e5e93835db4d",
+        "name": "",
+        "topic": "distancia",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "e1d9e52ae503dd83",
+                "f7ad38136cec6935",
+                "e962e1fe69025fb2"
+            ]
+        ]
+    },
+    {
+        "id": "e1d9e52ae503dd83",
+        "type": "debug",
+        "z": "a3b1e5e93835db4d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f7ad38136cec6935",
+        "type": "ui_gauge",
+        "z": "a3b1e5e93835db4d",
+        "name": "",
+        "group": "6a166b3bdd6621c6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "0",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e962e1fe69025fb2",
+        "type": "ui_chart",
+        "z": "a3b1e5e93835db4d",
+        "name": "",
+        "group": "6a166b3bdd6621c6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Histórico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "7",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1800bd013730f54",
+        "type": "debug",
+        "z": "b98e493e41183753",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "77e37e2de87233e3",
+        "type": "function",
+        "z": "b98e493e41183753",
+        "name": "function 1",
+        "func": "\n/*\n// Verifica se a mensagem contém a string de latitude e longitude\nif (msg.topic === \"esp32_gps\" && typeof msg.payload === \"string\") {\n    // Extrai os valores de latitude e longitude da string usando expressão regular\n    var matches = msg.payload.match(/Latitude:\\s*(-?\\d+\\.\\d+)\\s*Longitude:\\s*(-?\\d+\\.\\d+)/);\n\n    // Verifica se os valores de latitude e longitude foram encontrados na string\n    if (matches && matches.length === 3) {\n        // Extrai os valores de latitude e longitude dos resultados da expressão regular\n        var lat = parseFloat(matches[1]);\n        var lon = parseFloat(matches[2]);\n\n        // Verifica se os valores de latitude e longitude são válidos\n        if (!isNaN(lat) && !isNaN(lon)) {\n            // Cria o objeto com os dados do dispositivo ESP32\n            var thing = {\n                name: \"Elismar Silva\",\n                icon: \"pin\",\n                iconColor: \"red\",\n                lat: lat,\n                lon: lon,\n                lineColor: \"blue\"\n            };\n\n            if (context.get('route')) {\n                context.get('route').push([lat, lon]);\n            } else {\n                // Se a rota não existe, cria uma nova rota com o primeiro ponto\n                context.set('route', [[lat, lon]]);\n            }\n\n            // Adiciona a rota ao objeto\n            thing.line = context.get('route');\n\n            // Define a mensagem como o objeto criado\n            msg.payload = thing;\n        } else {\n            // Se os valores de latitude e/ou longitude forem inválidos, define a mensagem como null\n            msg.payload = null;\n        }\n    } else {\n        // Se não foi possível encontrar os valores de latitude e longitude na string, define a mensagem como null\n        msg.payload = null;\n    }\n} else {\n    // Se a mensagem não for do tópico esperado ou não for uma string, define a mensagem como null\n    msg.payload = null;\n}\n\n// Retorna a mensagem\nreturn msg;\n\n\n*/\n\n// Verifica se a mensagem contém a string de latitude e longitude\nif (msg.topic === \"esp32_gps\" && typeof msg.payload === \"string\") {\n    // Extrai os valores de latitude e longitude da string usando expressão regular\n    var matches = msg.payload.match(/Latitude:\\s*(-?\\d+\\.\\d+)\\s*Longitude:\\s*(-?\\d+\\.\\d+)/);\n\n    // Verifica se os valores de latitude e longitude foram encontrados na string\n    if (matches && matches.length === 3) {\n        // Extrai os valores de latitude e longitude dos resultados da expressão regular\n        var lat = parseFloat(matches[1]);\n        var lon = parseFloat(matches[2]);\n\n        // Verifica se os valores de latitude e longitude são válidos\n        if (!isNaN(lat) && !isNaN(lon)) {\n            // Cria o objeto com os dados do dispositivo ESP32\n            var thing = {\n                name: \"Elismar Silva\",\n                icon: \"custom-icon\", // Nome do ícone personalizado\n                iconColor: \"red\",\n                lat: lat,\n                lon: lon,\n                lineColor: 'blue',\n                lineWidth: 8\n            };\n\n            // Se a rota já existe, adiciona o novo ponto à rota\n            if (context.get('route')) {\n                context.get('route').push([lat, lon]);\n            } else {\n                // Se a rota não existe, cria uma nova rota com o primeiro ponto\n                context.set('route', [[lat, lon]]);\n            }\n\n            // Adiciona a rota ao objeto\n            thing.line = context.get('route');\n\n            // Define a mensagem como o objeto criado\n            msg.payload = thing;\n        } else {\n            // Se os valores de latitude e/ou longitude forem inválidos, define a mensagem como null\n            msg.payload = null;\n        }\n    } else {\n        // Se não foi possível encontrar os valores de latitude e longitude na string, define a mensagem como null\n        msg.payload = null;\n    }\n} else {\n    // Se a mensagem não for do tópico esperado ou não for uma string, define a mensagem como null\n    msg.payload = null;\n}\n\n// Retorna a mensagem\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "79a97c54c24f4a50",
+                "d1800bd013730f54"
+            ]
+        ]
+    },
+    {
+        "id": "79a97c54c24f4a50",
+        "type": "ui_worldmap",
+        "z": "b98e493e41183753",
+        "group": "4c1037acf269adb8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 540,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e3235da8cb3f5295",
+        "type": "mqtt in",
+        "z": "b98e493e41183753",
+        "name": "",
+        "topic": "esp32_gps",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "77e37e2de87233e3"
+            ]
+        ]
+    },
+    {
+        "id": "e53291b32a9e1258",
+        "type": "mqtt in",
+        "z": "aaeee606f7f28d55",
+        "name": "",
+        "topic": "msg",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "10c5feeab6d3159e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "3b61ce367d93349e"
+            ]
+        ]
+    },
+    {
+        "id": "3b61ce367d93349e",
+        "type": "debug",
+        "z": "aaeee606f7f28d55",
+        "name": "mensagem",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7ed8526fcf02fdab",
+        "type": "ui_template",
+        "z": "aaeee606f7f28d55",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            []
+        ]
     }
-}
+]
